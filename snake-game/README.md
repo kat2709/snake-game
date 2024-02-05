@@ -1,4 +1,4 @@
-# Image Gallery
+# Snake Game
 
 [Link to the app](https://kat2709.github.io/snake-game/)
 
