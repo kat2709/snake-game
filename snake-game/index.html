@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hungry Caterpillar</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link type="Image/x-icon" href="./assets/favicon.svg" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Autour+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Hungry Caterpillar</h1>
+      <div class="score-box">
+        <div>Score : <span id="game-score">0</span></div>
+        <img id="setting" src="./assets/setting.svg" alt="setting" />
+        <dialog class="setting-dialog">
+          <img id="close-btn" src="./assets/close.svg" alt="close-btn" />
+          <p>
+            Use "ArrowLeft" or "A" to make the snake go left, "ArrowRight" or
+            "D" to make the snake go right, "ArrowUp" or "W" to make the snake
+            go up, and "ArrowDown" or "S" to make the snake go down. The snake
+            grows after eating an apple. You get 100 points for every eating
+            apple. Snake can go through a wall. If the snake hits snake's tail
+            game over! For mobile version use navigation arrows to change
+            snake's direction. Good luck and have fun!
+          </p>
+        </dialog>
+      </div>
+      <div class="grid-container"></div>
+      <div class="navigation-box">
+        <img id="arrow-up" src="./assets/arrowdown.svg" alt="arrow-up" />
+        <div class="left-right-direction">
+          <img id="arrow-left" src="./assets/arrowdown.svg" alt="arrow-left" />
+          <img
+            id="arrow-right"
+            src="./assets/arrowdown.svg"
+            alt="arrow-right"
+          />
+        </div>
+        <img id="arrow-down" src="./assets/arrowdown.svg" alt="arrow-down" />
+      </div>
+    </main>
+    <footer>
+      <a
+        href="https://github.com/kat2709/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="git-logo" src="./assets/github-logo.svg" alt="git-logo" />
+      </a>
+      <a
+        href="https://rs.school/js-stage0/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="rs-logo" src="./assets/rs_school.svg" alt="logo" />
+      </a>
+      <p>2023</p>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
