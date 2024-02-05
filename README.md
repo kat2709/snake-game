@@ -9,6 +9,7 @@
 - HTML
 - CSS
 - JavaScript
+- Local Storage
 
 ## Screenshots
 
