@@ -1,6 +1,6 @@
 # Snake Game
 
-[Link to the app](https://kat2709.github.io/snake-game/)
+[Link to the app](https://kat2709.github.io/snake-game/snake-game)
 
 [Link to the task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30%23/js30-9.md)
 
