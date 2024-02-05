@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+.blackout-style {
+  filter: brightness(20%);
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Autour One";
+  background-image: url("./assets/butterfly.jpg");
+  background-size: contain;
+  font-size: 20px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 35px;
+  text-align: center;
+  color: rgb(36 93 38);
+}
+
+.score-box {
+  margin-top: 10px;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#setting {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#setting:hover {
+  transform: scale(1.1);
+}
+
+.setting-dialog {
+  width: 65%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  padding: 20px 10px;
+  line-height: 40px;
+}
+
+.setting-dialog p {
+  margin-top: 10px;
+}
+
+#close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+.grid-container {
+  margin-top: 5px;
+  width: 500px;
+  height: 500px;
+  border: solid 5px rgb(99, 176, 102);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("./assets/ground.jpg");
+}
+
+.game-over {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.grid-cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snake {
+  background-color: rgb(255, 251, 0);
+  border-radius: 50%;
+}
+
+.snake-head {
+  background-image: url("./assets/head.svg");
+  background-size: contain;
+}
+
+.snake-left {
+  transform: rotate(90deg);
+}
+
+.snake-right {
+  transform: rotate(-90deg);
+}
+
+.snake-up {
+  transform: rotate(180deg);
+}
+
+.snake-down {
+  transform: rotate(0deg);
+}
+
+.food{
+  background-size: contain;
+  animation-duration: 3s;
+  animation-name: zooming;
+  animation-iteration-count: infinite;
+}
+
+.apple {
+  background-image: url("./assets/food/apple.svg");
+}
+.orange {
+  background-image: url("./assets/food/orange.svg");
+}
+.mango {
+  background-image: url("./assets/food/mango.svg");
+}
+.berry {
+  background-image: url("./assets/food/berry.svg");
+}
+.banana {
+  background-image: url("./assets/food/banana.svg");
+}
+.cherry {
+  background-image: url("./assets/food/cherry.svg");
+}
+.strawberry{
+  background-image: url("./assets/food/strawberry.svg");
+}
+.snack{
+  background-image: url("./assets/food/snack.svg");
+}
+.sausage{
+  background-image: url("./assets/food/sausage.svg");
+}
+.pudding{
+  background-image: url("./assets/food/pudding.svg");
+}
+.sandwich{
+  background-image: url("./assets/food/sandwich.svg");
+}
+.pizza{
+  background-image: url("./assets/food/pizza.svg");
+}
+.pasta{
+  background-image: url("./assets/food/pasta.svg");
+}
+.noodle{
+  background-image: url("./assets/food/noodle.svg");
+}
+.icecream{
+  background-image: url("./assets/food/icecream.svg");
+}
+.icecream-two{
+  background-image: url("./assets/food/icecream2.svg");
+}
+.grape{
+  background-image: url("./assets/food/grape.svg");
+}
+.egg{
+  background-image: url("./assets/food/egg.svg");
+}
+.cheese{
+  background-image: url("./assets/food/cheese.svg");
+}
+.cake{
+  background-image: url("./assets/food/cake.svg");
+}
+.ananas{
+  background-image: url("./assets/food/ananas.svg");
+}
+
+h2 {
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(255 191 0);
+}
+
+.your-score {
+  font-weight: bold;
+  width: 100%;
+  color: rgb(255, 244, 0);
+  text-align: center;
+  text-transform: uppercase;
+  animation-duration: 0.5s;
+  animation-name: changeColor;
+  animation-iteration-count: infinite;
+}
+
+.score-table {
+  margin-left: 20px;
+  width: 100%;
+  font-weight: bold;
+  color: rgb(255, 234, 54);
+}
+
+h3 {
+  text-transform: uppercase;
+  width: 100%;
+  color: rgb(255 191 0);
+  text-align: center;
+}
+
+.newgame-btn {
+  border: solid 3px rgb(36 93 38);
+  border-radius: 10px;
+  margin: auto;
+  height: 35px;
+  width: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(255 191 0);
+  cursor: pointer;
+}
+
+.newgame-btn:hover {
+  background-color: rgb(99, 176, 102);
+  color: rgb(255, 244, 0);
+}
+
+.navigation-box {
+  display: none;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-box img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#arrow-right {
+  transform: rotate(-90deg);
+}
+
+#arrow-left {
+  transform: rotate(90deg);
+}
+
+#arrow-up {
+  margin-bottom: -15px;
+  transform: rotate(-180deg);
+}
+
+#arrow-down {
+  margin-top: -15px;
+}
+
+.left-right-direction {
+  display: flex;
+  width: 193px;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer p {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.git-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.rs-logo {
+  width: 100px;
+}
+
+.git-logo:hover {
+  scale: 1.1;
+}
+
+.rs-logo:hover {
+  scale: 1.1;
+  padding: 5px;
+}
+
+@keyframes zooming {
+  95% {
+    transform: rotate(360deg) scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes changeColor {
+  50% {
+    color: rgb(255, 244, 0);
+  }
+  to {
+    color: white;
+  }
+}
+
+@media (max-width: 530px) {
+  h1 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .score-box {
+    font-size: 15px;
+  }
+  .setting-dialog {
+    width: 80%;
+    line-height: 35px;
+  }
+  .grid-container {
+    width: 300px;
+    height: 300px;
+  }
+  .grid-cell {
+    width: 30px;
+    height: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .your-score {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .score-table {
+    font-size: 12px;
+  }
+  .newgame-btn {
+    height: 25px;
+    width: 120px;
+    font-size: 16px;
+  }
+  .navigation-box {
+    display: flex;
+  }
+  footer {
+    height: 50px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+  .git-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .rs-logo {
+    width: 80px;
+  }
+}
