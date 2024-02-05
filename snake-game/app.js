@@ -403,5 +403,5 @@ window.onload = () => {
 function createSound(i) {
   const sound = document.createElement("audio");
   sound.src = sounds[i];
-  audio.play();
+  sound.play();
 }
