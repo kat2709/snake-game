@@ -12,5 +12,5 @@
 
 ## Screenshots
 
-![](./assets/snake-dekstop.PNG)
-![](./assets/snake-mobile.PNG)
+![](.snake-game/assets/snake-dekstop.PNG)
+![](.snake-game/assets/snake-mobile.PNG)
